@@ -1,0 +1,34 @@
+
+.Navbar{
+    background-color:#c61066;
+    height:50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+    margin: 0 auto;
+   
+}
+.NavbarTitle{
+ color:white;
+ font-size: 30px;
+}
+.NavbarItems{
+    color:white;
+    display: flex;
+    
+}
+ul{
+    display: inline-block;
+    list-style-type: none;
+}
+li{
+    display: inline;
+    margin: 10px;
+}
+.Item{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bolder;
+}
