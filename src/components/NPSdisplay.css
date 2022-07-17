@@ -1,0 +1,8 @@
+.Container-NPS-display{
+    height:100%;
+    width:100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -12,12 +12,12 @@ const NPSdetails =({setVote,votes})=>{
 
                         <Link to="/detailed" >
                         
-                            <div className='title'>
+                            <div className='title'style={{backgroundColor:item.bgColor}}>
                                 <h3>{item.class}</h3>
                                 <h3> Total Geral de notas </h3>
                                 <h3> % </h3>
                             </div>
-                            <div className='subtitle'>
+                            <div className='subtitle' style={{backgroundColor:item.bgColor}} >
                                 <h3> {item.gradeLength} notas</h3>
                                 <h3> {item.totalGradeLength>=1?item.totalGradeLength:0}</h3>
                                 <h3>{item.totalGradeLength>=1?((item.gradeLength) / (item.totalGradeLength) * 100 ):0}</h3>

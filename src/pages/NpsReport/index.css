@@ -13,7 +13,7 @@ main{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    width:1200px;
+    width:1600px;
     margin: auto;
     
 }
@@ -24,7 +24,8 @@ main{
     margin: 40px auto;   
 }
 .NPS-display-left{
-    width: 600px;
+    width: 800px;
+   
 }
 .NPS-display-right{
     width:600px;

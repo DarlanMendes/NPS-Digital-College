@@ -99,9 +99,9 @@ const NpsReport = ({ votes, setVotes, setVote}) => {
     }
     //------Garantia de serão carregados os dados quando houver mudanças---------------------------------------------------
     useEffect(() => {
-        setVotes([{ class: "Nota de 1 a 6", gradeLength: detractors, totalGradeLength: total },
-        { class: "Nota de 7 a 8", gradeLength: passives, totalGradeLength: total },
-        { class: "Nota de 9 a 10", gradeLength: promoters, totalGradeLength: total }]);
+        setVotes([{ class: "Nota de 1 a 6", gradeLength: detractors, totalGradeLength: total, bgColor:"red"},
+        { class: "Nota de 7 a 8", gradeLength: passives, totalGradeLength: total, bgColor:"yellow" },
+        { class: "Nota de 9 a 10", gradeLength: promoters, totalGradeLength: total, bgColor:"green" }]);
         
         setNPS(((promoters - detractors) * 100) / total);
 

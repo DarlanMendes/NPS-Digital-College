@@ -1,23 +1,29 @@
 .Item{
     display: flex;
     flex-direction: column; 
-    max-width: 1300px;
-    margin: 60px auto;
+    max-width: 1600px;
+    margin: 20px auto;
+    
+}
+.Item a{
+    text-decoration: none;
 }
 .title{
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
-    background-color: #22232f;
     color: white;
     padding: 0px 40px;
+    border-radius: 5px;
+    
 }
+
 .subtitle{
     display: flex;
-    width:80%;
+    width:100%;
     justify-content: space-between;
-    background-color:#22232f;
     margin-top: 5px;
     color: white;
-    padding: 30px 40px;
+    padding: 10px 40px;
+    border-radius: 5px;
 }

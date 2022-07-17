@@ -1,11 +1,13 @@
-
+import './NPSdisplay.css';
 
 const NPSdisplay=({nps})=>{
 
     
     return(
         
-        <div>{nps?nps:0}</div>
+        <div className="Container-NPS-display">
+            {nps?nps:0}
+        </div>
 
     );
 }
