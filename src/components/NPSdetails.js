@@ -1,6 +1,10 @@
 import {Link} from 'react-router-dom';
 import './NPSdetails.css';
 const NPSdetails =({setVote,votes})=>{
+
+
+
+
     return(
         <div >
             {votes.map((item, key) => (

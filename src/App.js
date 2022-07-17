@@ -16,6 +16,7 @@ function App() {
   const [votes,setVotes]= useState([]);
   const [vote,setVote]=useState();
   
+  
   useEffect(()=>{
       setUserId(localStorage.getItem("UserId"));
       console.log(vote);
@@ -33,7 +34,7 @@ function App() {
            <Route path="/partial-result" element={<Partial />} />
           <Route path="/" element ={!userId &&<Login setIsAuth={setIsAuth}/>}/>
           <Route path='/sign-up' element={<SignUp/>}/>
-          {isAuth &&<Route path="/detailed" element={<Detailed vote={vote}/>}/>}
+         <Route path="/detailed" element={<Detailed vote={vote}/>}/>
         </Routes>
       </Router>
     </div>

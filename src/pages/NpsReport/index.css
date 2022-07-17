@@ -30,3 +30,31 @@ main{
     width:600px;
    
 }
+.Display-individual-grades{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+ 
+}
+.individual-grade{
+    background-color: red;
+   border: solid 1px black;
+    color:white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.input-individual-grade{
+    width:100px;
+    margin: 20px;
+}
+.grade-group{
+    
+    margin: 20px;
+    width: 200px;
+}
