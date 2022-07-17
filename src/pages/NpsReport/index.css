@@ -8,26 +8,25 @@ header{
     margin: 0 auto;
     font-family:Arial, Helvetica, sans-serif;
 }
-.Item{
-    display: flex;
-    flex-direction: column; 
-    max-width: 80vw;
-    margin: 60px auto;
+
+main{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:1200px;
+    margin: auto;
+    
 }
-.title{
+.btn-report{
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: #22232f;
-    color: white;
-    padding: 0px 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;   
 }
-.subtitle{
-    display: flex;
-    width:100%;
-    justify-content: space-between;
-    background-color:#22232f;
-    margin-top: 5px;
-    color: white;
-    padding: 30px 40px;
+.NPS-display-left{
+    width: 600px;
+}
+.NPS-display-right{
+    width:600px;
+   
 }

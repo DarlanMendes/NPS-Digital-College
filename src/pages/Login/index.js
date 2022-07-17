@@ -29,12 +29,12 @@ const Login=({setIsAuth})=>{
     }
 
     return(
-        <>
+        <div>
         <input type="email" placeholder="Digite seu email" onChange={(e)=>{setEmail(e.target.value)}}></input>
         <input type="password" placeholder="Digite sua senha" onChange={(e)=>{setPassword(e.target.value)}}></input>
         <button onClick={handleLogin}> Fazer login</button>
         <Link to="/sign-up">Não possui cadastro ainda? Clique aqui e faça seu cadastro</Link>
-        </>
+        </div>
     );
 }
 export default Login;
