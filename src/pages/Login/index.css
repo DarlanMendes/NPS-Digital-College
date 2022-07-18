@@ -1,0 +1,126 @@
+*{
+    /*    border: 1px solid red;*/
+    }
+    body {
+        background: #4D4D4D;
+        margin: 0px;
+      
+    }
+    
+    .btn-login-cadastro-page {
+        display: flex;
+        justify-content: center;
+        background: #C61066;
+        border-radius: 5px;
+        border: 0px;
+        width: 130px;
+        padding:0 20px;
+        color: white;
+        font-weight: 800;
+        
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        background: #C61066;
+        border-radius: 5px;
+        border: 0px;
+        width: 110px;
+        padding:0 20px;
+        color: white;
+        font-weight: 800;
+        text-decoration:none ;
+    }
+    
+    span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 42px;
+        color: #F5F7F9;
+        
+    }
+    
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        color: #F5F7F9;
+        
+    }
+    
+    input {
+        background: #F5F7F9;
+        border: 2px solid #282F66;
+        border-radius: 5px;
+    }
+    
+    .Title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 800;
+        line-height: 42px;
+        color: #F5F7F9;
+        font-size: 42px;
+    }
+    
+    .quadro {
+        margin-top: 10%;
+        display: flex;
+        background: #4D4D4D;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        flex-wrap: wrap;
+        
+    
+    }
+    
+    .login {
+        display: grid;
+       width: 40%;
+       min-width: 300px;
+       margin-bottom: 30px;
+    }
+    
+    .sngp{
+        display: grid;
+        width: 300px;
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .sublogin {
+        display: grid;
+        
+    }
+    
+    input {
+        margin-bottom: 15px;
+        height: 20px;
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.637);
+        padding:5px;
+    }
+    
+    .logo {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+    }
+    
+    img {
+        width: 80%;
+    }
+    
+    .inpt {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    footer{
+        text-align: center;
+            }
