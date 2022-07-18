@@ -5,7 +5,7 @@ import Partial from './pages/Partial';
 
 import NpsReport from './pages/NpsReport';
 import Navbar from './components/Navbar';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp';
 import Detailed from './pages/Detailed';
 

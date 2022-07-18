@@ -1,5 +1,16 @@
+body{
+    background-color: white;
+}
 .mainResults{
     padding: 40px;
+    background-color: white;
+    height: 100%;
+    width:100vw;
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 header{
     color: deeppink;
@@ -11,11 +22,8 @@ header{
 
 main{
     display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width:1600px;
-    margin: auto;
-    
+    flex-wrap: wrap;
+    justify-content: space-around; 
 }
 .btn-report{
     display: flex;
@@ -24,22 +32,21 @@ main{
     margin: 40px auto;   
 }
 .NPS-display-left{
-    width: 800px;
-   
+    min-width: 600px;
+   max-width: 900px;
 }
 .NPS-display-right{
-    width:600px;
+    min-width:600px;
    
 }
 .Display-individual-grades{
-   
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
     padding: 20px;
- 
+    justify-content: center;
 }
+
+
 .individual-grade{
     background-color: red;
    border: solid 1px black;
@@ -54,8 +61,8 @@ main{
     width:100px;
     margin: 20px;
 }
-.grade-group{
-    
+.grade-group{  
     margin: 20px;
-    width: 200px;
+    width: 150px;
+   
 }
