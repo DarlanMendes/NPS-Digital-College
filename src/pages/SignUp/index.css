@@ -1,127 +1,96 @@
-/* <div class="quadro">
-<div class="login">
-    <span class="Title">Crie um nova conta</span>
-   
-    <div class="sublogin">
-        
-        <input type="email" placeholder="Nome" ></input>
-        <input type="email" placeholder="email" ></input>
-        <input type="password" placeholder="senha" ></input>
-        <input type="password" placeholder="repita sua senha" ></input>
-    </div>
-    <div class="inpt">
-        <button onClick={handleLogin}>Entrar</button>
-    </div>
-
-</div>
-<div class="logo">
-    <img src="Medidor.png">
-
-</div>
-
-</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C61066" fill-opacity="1" d="M0,256L120,250.7C240,245,480,235,720,197.3C960,160,1200,96,1320,64L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
-
 
 body {
     background: #4D4D4D;
     margin: 0px;
-  
-}
 
+}
 .btn-login-cadastro-page {
-    display: flex;
-    justify-content: center;
     background: #C61066;
     border-radius: 5px;
     border: 0px;
-    width: 130px;
-    padding:0 20px;
+    width: 150px;
     color: white;
     font-weight: 800;
     
+    transition: ease 0.9s;
+    
 }
-a {
-    display: flex;
-    justify-content: center;
-    background: #C61066;
+.btn-login-cadastro-page:disabled {
+    background: rgba(105, 9, 54, 0.705);
     border-radius: 5px;
     border: 0px;
-    width: 110px;
-    padding:0 20px;
+    width: 150px;
     color: white;
     font-weight: 800;
-    text-decoration:none ;
+   transform: translateX(-137%);
 }
 
-span {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    line-height: 42px;
-    color: #F5F7F9;
-    
+
+
+.seta {
+    color: aliceblue;
 }
 
-p {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    color: #F5F7F9;
-    
-}
-
-input {
+.inpt {
     background: #F5F7F9;
-    border: 2px solid #282F66;
+    border: 1px solid #8d8d8d;
     border-radius: 5px;
+}
+
+.inpt::placeholder {
+    font-size: 19px;
 }
 
 .Title {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    line-height: 42px;
+    line-height: 100%;
     color: #F5F7F9;
     font-size: 42px;
+    margin-bottom: 20px;
 }
 
 .quadro {
-    height:80vh;
-    margin:10% auto;
+    margin-top: 10%;
     display: flex;
     background: #4D4D4D;
-    width: 100vw;
     flex-wrap: wrap;
-    align-items:center;
     justify-content: space-around;
+    
 }
 
 .login {
-    display: grid;
-   width: 40%;
-   min-width: 300px;
-   margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    margin: 10px;
+  
 }
 
-.sngp{
+.sngp {
     display: grid;
     width: 300px;
     margin-top: 15%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.sublogin {
-    display: grid;
     
 }
 
-input {
+.sublogin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    
+}
+
+.inpt {
     margin-bottom: 15px;
     height: 20px;
-    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.637);
-    padding:5px;
+    
+ width: 96%;
 }
 
 .logo {
@@ -130,18 +99,27 @@ input {
     justify-content: center;
     align-items: center;
     min-width: 300px;
+    margin: 10px;
 }
 
-img {
+.imgn {
     width: 80%;
+    max-width: 400px;
+
 }
 
 .inpt {
     padding: 5px;
     display: flex;
     justify-content: space-between;
-   
 }
-footer{
-    text-align: center;
-        } */
+
+.bcgEdge {
+    z-index: -0;
+    height: 50vh;
+    width: 50vw;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    resize: true;
+}
