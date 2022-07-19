@@ -7,24 +7,25 @@ import NPSdisplay from '../../components/NPSdisplay';
 
 
 
-const NpsReport = ({ votes, setVotes, setVote}) => {
+const NpsReport = ({ votes, setVotes, setVote }) => {
 
+    const [readDB, setReadDB] = useState(false);
     const [detractors, setDetractors] = useState(0);
     const [passives, setPassives] = useState(0);
     const [promoters, setPromoters] = useState(0);
     const [list, setList] = useState([]);
     const [total, setTotal] = useState(0);
     const [nps, setNPS] = useState(0);
-    const [gradeVoters, setGradeVoters] = useState([{ class: "Nota 1", grade: 0 },
+    const [gradeVoters, setGradeVoters] = useState([{ class: "Nota 1", grade: 0, color: "red" },
     { class: "Nota 2", grade: 0, color: "red" },
-    { class: "Nota3", grade: 0, color: "red" },
+    { class: "Nota 3", grade: 0, color: "red" },
     { class: "Nota 4", grade: 0, color: "red" },
     { class: "Nota 5", grade: 0, color: "red" },
     { class: "Nota 6", grade: 0, color: "red" },
     { class: "Nota 7", grade: 0, color: "yellow" },
     { class: "Nota 8", grade: 0, color: "yellow" },
     { class: "Nota 9", grade: 0, color: "green" },
-    { class: "Nota10", grade: 0, color: "green" }]);
+    { class: "Nota 10", grade: 0, color: "green" }]);
 
 
     // Aquisição das notas no banco de dados---------------------------------------------
@@ -36,74 +37,133 @@ const NpsReport = ({ votes, setVotes, setVote}) => {
             setList([]);
             list.push(doc.data());
         });
-        Listed();
+       
+        console.log("raed Db", readDB,list);
+         Listed();
 
     }
+
+    const handleChoice=()=>{
+        setReadDB(!readDB);
+        
+    }
+    const SetUpVotes = () => {
+
+        if (gradeVoters) {
+            Listed();
+        }
+    }
+
+
     // Separação e classificação das notas ----------------------------------------
     const Listed = () => {
         let qt1 = 0; let qt2 = 0; let qt3 = 0; let qt4 = 0; let qt5 = 0; let qt6 = 0; let qt7 = 0; let qt8 = 0; let qt9 = 0; let qt10 = 0;
-        list.forEach((item) => {
-            switch (parseInt(item.vote)) {
-                case 1:
-                    qt1 = qt1 + 1;
-                    console.log(qt1);
-                    break;
-                case 2:
-                    qt2 = qt2 + 1;
-                    break;
-                case 3:
-                    qt3 = qt3 + 1;
-                    break;
-                case 4:
-                    qt4 = qt4 + 1;
-                    break;
-                case 5:
-                    qt5 = qt5 + 1;
+        if (readDB) {
+            list.forEach((item) => {
+                console.log("entrou db")
+                switch (parseInt(item.vote)) {
+                    case 1:
+                        qt1 = qt1 + 1;
+                        console.log(qt1);
+                        break;
+                    case 2:
+                        qt2 = qt2 + 1;
+                        break;
+                    case 3:
+                        qt3 = qt3 + 1;
+                        break;
+                    case 4:
+                        qt4 = qt4 + 1;
+                        break;
+                    case 5:
+                        qt5 = qt5 + 1;
 
-                    break;
-                case 6:
-                    qt6 = qt6 + 1;
-                    break;
-                case 7:
-                    qt7 = qt7 + 1;
-                    break;
-                case 8:
-                    qt8 = qt8 + 1;
-                    break;
-                case 9:
-                    qt9 = qt9 + 1;
-                    break;
-                case 10:
-                    qt10 = qt10 + 1;
-                    break;
+                        break;
+                    case 6:
+                        qt6 = qt6 + 1;
+                        break;
+                    case 7:
+                        qt7 = qt7 + 1;
+                        break;
+                    case 8:
+                        qt8 = qt8 + 1;
+                        break;
+                    case 9:
+                        qt9 = qt9 + 1;
+                        break;
+                    case 10:
+                        qt10 = qt10 + 1;
+                        break;
 
-            }
-            setGradeVoters([{ class: "Nota 1", grade: qt1, color: "red" },
-            { class: "Nota 2", grade: qt2, color: "red" },
-            { class: "Nota3", grade: qt3, color: "red" },
-            { class: "Nota 4", grade: qt4, color: "red" },
-            { class: "Nota 5", grade: qt5, color: "red" },
-            { class: "Nota 6", grade: qt6, color: "red" },
-            { class: "Nota 7", grade: qt7, color: "yellow" },
-            { class: "Nota 8", grade: qt8, color: "yellow" },
-            { class: "Nota 9", grade: qt9, color: "green" },
-            { class: "Nota10", grade: qt10, color: "green" }])
+                }
+            })
+        }
+        else {
+            gradeVoters.forEach((item) => {
+               
+                switch ((item.class)) {
+                    case 'Nota 1':
+                        qt1 = item.grade;
+                        break;
+                    case 'Nota 2':
+                        qt2 = item.grade;
+                        break;
+                    case 'Nota 3':
+                        qt3 = item.grade;
+                        break;
+                    case 'Nota 4':
+                        qt4 = item.grade;
+                        break;
+                    case 'Nota 5':
+                        qt5 = item.grade;
+                        break;
+                    case 'Nota 6':
+                        qt6 = item.grade;
+                        break;
+                    case 'Nota 7':
+                        qt7 = item.grade;
+                        break;
+                    case 'Nota 8':
+                        qt8 = item.grade;
+                        break;
+                    case 'Nota 9':
+                        qt9 = item.grade;
+                        break;
+                    case 'Nota 10':
+                        qt10 = item.grade;
+                        break;
 
-        })
+                }
+            })
 
-        setDetractors(qt1 + qt2 + qt3 + qt4 + qt5 + qt6);
-        setPassives(qt7 + qt8);
-        setPromoters(qt9 + qt10);
-        setTotal(qt1 + qt2 + qt3 + qt4 + qt5 + qt6 + qt7 + qt8 + qt9 + qt10);
+        }
+        setGradeVoters([{ class: "Nota 1", grade: qt1, color: "red" },
+        { class: "Nota 2", grade: qt2, color: "red" },
+        { class: "Nota 3", grade: qt3, color: "red" },
+        { class: "Nota 4", grade: qt4, color: "red" },
+        { class: "Nota 5", grade: qt5, color: "red" },
+        { class: "Nota 6", grade: qt6, color: "red" },
+        { class: "Nota 7", grade: qt7, color: "yellow" },
+        { class: "Nota 8", grade: qt8, color: "yellow" },
+        { class: "Nota 9", grade: qt9, color: "green" },
+        { class: "Nota 10", grade: qt10, color: "green" }])
 
+
+
+        setDetractors(eval(qt1) + eval(qt2) + eval(qt3) + eval(qt4) + eval(qt5) + eval(qt6));
+        setPassives(eval(qt7) + eval(qt8));
+        setPromoters(eval(qt9) + eval(qt10));
+        setTotal(eval(qt1) + eval(qt2) + eval(qt3) + eval(qt4) + eval(qt5) + eval(qt6)+eval(qt7) + eval(qt8)+eval(qt9) + eval(qt10));
+        
+        console.log("notas", typeof(qt1), qt2, qt3, qt4, qt5, qt6, qt7, qt8, qt9, qt10)
     }
     //------Garantia de serão carregados os dados quando houver mudanças---------------------------------------------------
     useEffect(() => {
-        setVotes([{ class: "Nota de 1 a 6", gradeLength: detractors, totalGradeLength: total, bgColor:"red"},
-        { class: "Nota de 7 a 8", gradeLength: passives, totalGradeLength: total, bgColor:"yellow" },
-        { class: "Nota de 9 a 10", gradeLength: promoters, totalGradeLength: total, bgColor:"green" }]);
-        
-        setNPS(((promoters - detractors) * 100) / total);
+        setVotes([{ class: "Nota de 1 a 6", gradeLength: detractors, totalGradeLength: total, bgColor: "red" },
+        { class: "Nota de 7 a 8", gradeLength: passives, totalGradeLength: total, bgColor: "yellow" },
+        { class: "Nota de 9 a 10", gradeLength: promoters, totalGradeLength: total, bgColor: "green" }]);
+
+        setNPS((((promoters - detractors) * 100) / total).toFixed(2));
 
         console.log(gradeVoters)
     }, [detractors, passives, promoters, nps]);
@@ -115,7 +175,7 @@ const NpsReport = ({ votes, setVotes, setVote}) => {
 
         <div className='mainResults'>
             <header>Resultados NPS</header>
-            <main>
+            <main className='main-Display'>
                 <div className="NPS-display-left">
                     <NPSdetails votes={votes} setVote={setVote} />
                 </div>
@@ -123,14 +183,18 @@ const NpsReport = ({ votes, setVotes, setVote}) => {
                     <NPSdisplay nps={nps} />
                 </div>
             </main>
+            <h3>Escolha a forma como deseja calcular o NPS</h3>
+            <button onClick={handleChoice} disabled={readDB?false:true}>Manualmente</button>
+            <button onClick={handleChoice}disabled={readDB?true:false}>Listar BD</button>
             <div className='Display-individual-grades'>
                 {gradeVoters.map((note, index) =>
                 (<div className="group-grade" key={index}>
-                    <h3 className='individual-grade' style={({backgroundColor:note.color})}>{note.class}</h3>
-                    <input className='input-individual-grade'type="number" placeholder={note.grade}></input>
+                    <h3 className='individual-grade' style={({ backgroundColor: note.color })}>{note.class}</h3>
+                    <input className='input-individual-grade' type="number" placeholder={note.grade} onChange={(e) => { note.grade = (e.target.value) }}></input>
                 </div>))}
             </div>
-            <button className="btn-report" onClick={ListVotes}>{total > 0 ? "Recarregar Lista" : "Listar"}</button>
+            <button className="btn-report" onClick={ListVotes} style={{display:!readDB&&'none'}}>Calcular NPS</button>
+            <button className="btn-report-set-up" onClick={SetUpVotes} style={{display:readDB&&'none'}}>Calcular NPS</button>
         </div>
 
     );

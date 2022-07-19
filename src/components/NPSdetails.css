@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column; 
     max-width: 1600px;
-    margin: 20px auto;
+    margin:20px 0;
     
 }
 .Item a{
@@ -10,20 +10,26 @@
 }
 .title{
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    width: 90%;
+    min-width: 500px;
+    justify-content: space-around;
     color: white;
-    padding: 0px 40px;
+    padding: 0px 15px;
     border-radius: 5px;
     
 }
 
 .subtitle{
     display: flex;
-    width:100%;
+    width:90%;
+    min-width: 500px;
     justify-content: space-between;
     margin-top: 5px;
     color: white;
-    padding: 10px 40px;
+    padding: 10px 15px;
     border-radius: 5px;
+}
+h3{
+    font-size: 0.8em;
+    margin:10px;
 }

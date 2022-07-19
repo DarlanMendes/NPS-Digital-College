@@ -44,7 +44,7 @@ const NPSdisplay = ({ nps }) => {
                 </div>
             </div>
             <hr />
-            <div className='NPS-display-result'>  {nps ? nps : 0} %  </div>
+            <div className='NPS-display-result'>  {nps>=-100&&nps<=100? nps : "NPS"} %  </div>
             <div className='NPS-display-text'> {nps >= 75 ? npsResult[0].text :
                 nps >= 50 ? npsResult[1].text :
                     nps >= 0 ? npsResult[2].text :

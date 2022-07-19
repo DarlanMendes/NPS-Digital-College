@@ -4,10 +4,11 @@
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     padding: 30px;
     border-radius: 20px;
+    margin:auto;
 }
 
 .NPS-display-title {

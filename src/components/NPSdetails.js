@@ -20,7 +20,7 @@ const NPSdetails =({setVote,votes})=>{
                             <div className='subtitle' style={{backgroundColor:item.bgColor}} >
                                 <h3> {item.gradeLength} notas</h3>
                                 <h3> {item.totalGradeLength>=1?item.totalGradeLength:0}</h3>
-                                <h3>{item.totalGradeLength>=1?((item.gradeLength) / (item.totalGradeLength) * 100 ):0}</h3>
+                                <h3>{item.totalGradeLength>=1?(((item.gradeLength) / (item.totalGradeLength) * 100 )).toFixed(2):0}</h3>
                             </div>
 
                         </Link>

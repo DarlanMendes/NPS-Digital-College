@@ -46,7 +46,7 @@ const SignUp = () => {
 
     return (
         <>
-            <div className="quadro">
+            <div className="quadro-Sign-Up">
 
                 <div className="login">
                     <span className="Title">Crie um nova conta</span>
@@ -58,7 +58,7 @@ const SignUp = () => {
                     </div>
                 </div>
                 <div className="logo">
-                    <img className="imgn" src={require('./Medidor.png')} />
+                    <img className="imgn" src={medidor} />
 
                 </div>
             </div>

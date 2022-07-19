@@ -51,13 +51,14 @@ body {
     margin-bottom: 20px;
 }
 
-.quadro {
-    margin-top: 10%;
+.quadro-Sign-Up {
     display: flex;
     background: #4D4D4D;
     flex-wrap: wrap;
-    justify-content: space-around;
-    
+    justify-content: center;
+    align-items: center;
+    margin: 40% auto;
+   
 }
 
 .login {
@@ -94,24 +95,25 @@ body {
 }
 
 .logo {
-    width: 50%;
+    max-width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 300px;
-    margin: 10px;
+    min-width: 200px;
+   
 }
 
 .imgn {
     width: 80%;
     max-width: 400px;
-
+    margin: 40px auto;
 }
 
 .inpt {
     padding: 5px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .bcgEdge {
