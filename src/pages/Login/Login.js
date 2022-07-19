@@ -41,9 +41,9 @@ const Login = ({ setIsAuth }) => {
             <input className={styles.inputLogin} type="email" placeholder="Email" onChange={(e) => { setEmail(e.target.value) }}></input>
             <input className={styles.inputLogin} type="password" placeholder="Senha" onChange={(e) => { setPassword(e.target.value) }}></input>
           </div>
-          <div className={styles.sublogin}>
-            <button className={styles.btnLoginCadastroPage} onClick={handleLogin}>Entrar</button>
-            <Link className={styles.Link} to="/sign-up"><button className={styles.btnLoginCadastroPage}>Cadastro</button></Link>
+          <div className={styles.inpt}>
+            <button className={styles.btn2} onClick={handleLogin}>Entrar</button>
+            <button className={styles.btn2}><Link className={styles.Link} to="/sign-up">Cadastro</Link></button>
           </div>
         </div>
         <div className={styles.logo}>

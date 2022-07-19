@@ -1,11 +1,10 @@
+body {
+    background: #4D4D4D;
+    padding: 0;
+    margin: 0px;
+}
 
-     body{ 
-        background: #4D4D4D;
-        padding: 0;
-        margin: 0px;
-     }
-    
-    .btn-login-cadastro-page {
+ .btn-login-cadastro-page {
         display: flex;
         justify-content: center;
         background: #C61066;
@@ -16,119 +15,131 @@
         color: white;
         font-weight: 800;
         
-    }
-    .Link{
-        display: flex;
-        justify-content: center;
-        background: #C61066;
-        border-radius: 5px;
-        border: 0px;
-        width: 110px;
-        padding:0 20px;
-        color: white;
-        font-weight: 800;
-        text-decoration:none ;
-    }
-    
-    .subTitle {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        line-height: 42px;
-        color: #F5F7F9;
-        
-    }
-    
-    .pLogin {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        color: #F5F7F9;
-        
-    }
-    
-    .inputLogin {
-        background: #F5F7F9;
-        border: 2px solid #282F66;
-        border-radius: 5px;
-    }
-    
-    .Title {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 800;
-        line-height: 42px;
-        color: #F5F7F9;
-        font-size: 42px;
-    }
-    
-    .quadro {
-        height:80vh;
-        margin:0% auto;
-        display: flex;
-        background: #4D4D4D;
-        width: 80vw;
-        flex-wrap: wrap;
-        align-items:center;
-        justify-content: space-around;
-    }
-    
-    .login {
-        display: grid;
-       width: 40%;
-       min-width: 300px;
-       margin-bottom: 30px;
-    }
-    
-    .sngp{
-        display: grid;
-        width: 300px;
-        margin-top: 15%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .sublogin {
-        display: grid;
-        
-    }
-    
-    .inputLogin {
-        margin-bottom: 15px;
-        height: 20px;
-        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.637);
-        padding:5px;
-    }
-    
-    .logo {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 300px;
-    }
-    
-    .imgLogin{
-        width: 80%;
-    }
-    
-    .inpt {
-        padding: 5px;
-        display: flex;
-        justify-content: space-around;
-       
-    }
+    } 
+.Link {
+    display: flex;
+    justify-content: center;
+    background: #C61066;
+    border-radius: 5px;
+    border: 0px;
 
-    .bcgEdge{
-        z-index: -0;
-        height:50vh;
-        width:50vw;
-        position:fixed;
-        right:0;
-        bottom: 0;
-        resize: true;
-    }
-    footer{
-        text-align: center;
-            }
-            
+    padding: 0 20px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.subTitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+    color: #F5F7F9;
+
+}
+
+.pLogin {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: #F5F7F9;
+
+}
+
+.inputLogin {
+    background: #F5F7F9;
+    border: 2px solid #282F66;
+    border-radius: 5px;
+}
+
+.Title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    line-height: 42px;
+    color: #F5F7F9;
+    font-size: 42px;
+}
+
+.quadro {
+    height: 80vh;
+    margin: 0% auto;
+    display: flex;
+    background: #4D4D4D;
+    width: 80vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login {
+    display: grid;
+    width: 40%;
+    min-width: 300px;
+    margin-bottom: 30px;
+}
+
+.sngp {
+    display: grid;
+    width: 300px;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sublogin {
+    display: grid;
+
+}
+
+.inputLogin {
+    margin-bottom: 15px;
+    height: 20px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.637);
+    padding: 5px;
+}
+
+.logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.imgLogin {
+    width: 80%;
+}
+
+.inpt {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bcgEdge {
+    z-index: -0;
+    height: 50vh;
+    width: 50vw;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    resize: true;
+}
+
+footer {
+    text-align: center;
+}
+
+.btn2 {
+    display: flex;
+    justify-content: center;
+    background: #C61066;
+    border-radius: 5px;
+    border: 0px;
+    width: 150px;
+    padding: 0 20px;
+    color: white;
+    font-weight: 800;
+    margin: 5px;
+}
