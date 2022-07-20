@@ -6,12 +6,13 @@
 
 body{
     background-color: white;
+    
 }
 
 
 .mainResults{
     background-color: white;
-    height: 100%;
+    height: 120vh;
     width:100vw;
     flex-direction: column;
     flex-wrap: wrap;
@@ -34,13 +35,61 @@ header{
     align-items: center;
     
 }
-.btn-report{
+.btn-select-set{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px auto;   
+    padding: 10px 30px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: white;
+    background-color: #c61066;
+    box-shadow: 2px 3px 1px rgba(204, 204, 204, 0.436);
+}
+.btn-select-set-item-l{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 18px 0 0px 18px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.381);
+    opacity: 0.8;
+}
+.btn-select-set-item-r{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 0px 18px 18px 0px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.381);
+    opacity: 0.8; 
+    
+}
+.btn-select-set-item-l:disabled,.btn-select-set-item-r:disabled{
+    border: 2px solid #ff9cca;
+    background-color: #c61066;
+   
+}
+
+.btn-report, .btn-report-set-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;   
+    padding: 10px 30px;
+    border-radius: 18px;
+    font-weight: bolder;
+    color: white;
+    background-color: #c61066;
+    box-shadow: 3px 4px 1px rgba(204, 204, 204, 0.436);
 }
 .NPS-display-left{
+    margin: 40px 0px;
     min-width: 300px;
    max-width: 80vw;
 }
@@ -75,6 +124,11 @@ header{
     margin: 20px;
     width: 150px;
    
+}
+.btn-calculate-nps{
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
 }
 
 @media (max-width: 300px){

@@ -6,7 +6,7 @@ const NPSdetails =({setVote,votes})=>{
 
 
     return(
-        <div >
+        <div className='Container-nps-class-left'>
             {votes.map((item, key) => (
                     <div key={key} className="Item" onClick={() => { setVote(item) }}>
 

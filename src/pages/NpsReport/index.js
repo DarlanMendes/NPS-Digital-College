@@ -4,6 +4,7 @@ import { getDocs, collection } from "firebase/firestore";
 import { db } from '../../Api';
 import NPSdetails from '../../components/NPSdetails';
 import NPSdisplay from '../../components/NPSdisplay';
+import Dashboard from '../../components/Dashboard';
 
 
 
@@ -37,15 +38,24 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
             setList([]);
             list.push(doc.data());
         });
-       
-        console.log("raed Db", readDB,list);
-         Listed();
+
+        console.log("raed Db", readDB, list);
+        Listed();
 
     }
 
-    const handleChoice=()=>{
+    const handleChoice = () => {
         setReadDB(!readDB);
-        
+        setGradeVoters([{ class: "Nota 1", grade: 0, color: "red" },
+        { class: "Nota 2", grade: 0, color: "red" },
+        { class: "Nota 3", grade: 0, color: "red" },
+        { class: "Nota 4", grade: 0, color: "red" },
+        { class: "Nota 5", grade: 0, color: "red" },
+        { class: "Nota 6", grade: 0, color: "red" },
+        { class: "Nota 7", grade: 0, color: "yellow" },
+        { class: "Nota 8", grade: 0, color: "yellow" },
+        { class: "Nota 9", grade: 0, color: "green" },
+        { class: "Nota 10", grade: 0, color: "green" }])
     }
     const SetUpVotes = () => {
 
@@ -100,7 +110,7 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
         }
         else {
             gradeVoters.forEach((item) => {
-               
+
                 switch ((item.class)) {
                     case 'Nota 1':
                         qt1 = item.grade;
@@ -153,9 +163,9 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
         setDetractors(eval(qt1) + eval(qt2) + eval(qt3) + eval(qt4) + eval(qt5) + eval(qt6));
         setPassives(eval(qt7) + eval(qt8));
         setPromoters(eval(qt9) + eval(qt10));
-        setTotal(eval(qt1) + eval(qt2) + eval(qt3) + eval(qt4) + eval(qt5) + eval(qt6)+eval(qt7) + eval(qt8)+eval(qt9) + eval(qt10));
-        
-        console.log("notas", typeof(qt1), qt2, qt3, qt4, qt5, qt6, qt7, qt8, qt9, qt10)
+        setTotal(eval(qt1) + eval(qt2) + eval(qt3) + eval(qt4) + eval(qt5) + eval(qt6) + eval(qt7) + eval(qt8) + eval(qt9) + eval(qt10));
+
+        console.log("notas", typeof (qt1), qt2, qt3, qt4, qt5, qt6, qt7, qt8, qt9, qt10)
     }
     //------Garantia de serão carregados os dados quando houver mudanças---------------------------------------------------
     useEffect(() => {
@@ -175,6 +185,7 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
 
         <div className='mainResults'>
             <header>Resultados NPS</header>
+            <Dashboard/>    
             <main className='main-Display'>
                 <div className="NPS-display-left">
                     <NPSdetails votes={votes} setVote={setVote} />
@@ -183,9 +194,12 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
                     <NPSdisplay nps={nps} />
                 </div>
             </main>
-            <h3>Escolha a forma como deseja calcular o NPS</h3>
-            <button onClick={handleChoice} disabled={readDB?false:true}>Manualmente</button>
-            <button onClick={handleChoice}disabled={readDB?true:false}>Listar BD</button>
+            <div className="btn-select-set">
+                <h3>Escolha a forma como deseja calcular o NPS</h3>
+                <button className="btn-select-set-item-l" onClick={handleChoice} disabled={readDB ? false : true}>Manualmente</button>
+                <button className="btn-select-set-item-r" onClick={handleChoice} disabled={!readDB ? false : true}>Listar BD</button>
+
+            </div>
             <div className='Display-individual-grades'>
                 {gradeVoters.map((note, index) =>
                 (<div className="group-grade" key={index}>
@@ -193,8 +207,11 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
                     <input className='input-individual-grade' type="number" placeholder={note.grade} onChange={(e) => { note.grade = (e.target.value) }}></input>
                 </div>))}
             </div>
-            <button className="btn-report" onClick={ListVotes} style={{display:!readDB&&'none'}}>Calcular NPS</button>
-            <button className="btn-report-set-up" onClick={SetUpVotes} style={{display:readDB&&'none'}}>Calcular NPS</button>
+
+            <div className="btn-calculate-nps">
+                <button className="btn-report" onClick={ListVotes} style={{ display: !readDB && 'none' }}>Calcular NPS</button>
+                <button className="btn-report-set-up" onClick={SetUpVotes} style={{ display: readDB && 'none' }}>Calcular NPS</button>
+            </div>
         </div>
 
     );
