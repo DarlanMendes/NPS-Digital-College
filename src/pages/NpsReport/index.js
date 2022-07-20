@@ -185,7 +185,7 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
 
         <div className='mainResults'>
             <header>Resultados NPS</header>
-            <Dashboard/>    
+            <div className="dshbrd"><Dashboard/></div>
             <main className='main-Display'>
                 <div className="NPS-display-left">
                     <NPSdetails votes={votes} setVote={setVote} />

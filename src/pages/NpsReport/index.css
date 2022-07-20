@@ -9,6 +9,11 @@ body{
     
 }
 
+.dshbrd{
+    width: 50%;
+    margin: auto;
+}
+
 
 .mainResults{
     background-color: white;
