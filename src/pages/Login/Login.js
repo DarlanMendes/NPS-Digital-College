@@ -30,7 +30,7 @@ const Login = ({ setIsAuth }) => {
   }
 
   return (
-    <div ClassName={styles.ContainerLogin}>
+    <div className={styles.ContainerLogin}>
       <div className={styles.quadro}>
 
         <div className={styles.login}>

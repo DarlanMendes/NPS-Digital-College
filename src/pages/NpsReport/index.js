@@ -165,7 +165,7 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
         setPromoters(eval(qt9) + eval(qt10));
         setTotal(eval(qt1) + eval(qt2) + eval(qt3) + eval(qt4) + eval(qt5) + eval(qt6) + eval(qt7) + eval(qt8) + eval(qt9) + eval(qt10));
 
-        console.log("notas", typeof (qt1), qt2, qt3, qt4, qt5, qt6, qt7, qt8, qt9, qt10)
+        
     }
     //------Garantia de serão carregados os dados quando houver mudanças---------------------------------------------------
     useEffect(() => {
@@ -175,7 +175,7 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
 
         setNPS((((promoters - detractors) * 100) / total).toFixed(2));
 
-        console.log(gradeVoters)
+       
     }, [detractors, passives, promoters, nps]);
 
 
@@ -185,7 +185,7 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
 
         <div className='mainResults'>
             <header>Resultados NPS</header>
-            <div className="dshbrd"><Dashboard/></div>
+            <div className="dshbrd"><Dashboard gradeVoters={gradeVoters}/></div>
             <main className='main-Display'>
                 <div className="NPS-display-left">
                     <NPSdetails votes={votes} setVote={setVote} />
