@@ -65,3 +65,35 @@
     padding: 5px 0;
     height:120px
 }
+@media (max-width: 500px){
+    .Container-NPS-display{
+        height:300px;
+        width:300px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    h1{
+        font-size: 0.8em;
+        
+    }
+    .NPS-display-title{
+        height:30px
+    }
+    .NPS-display-result{
+        height: 100px;
+        font-size: 2.5em;
+        margin-top: 30px;
+    }
+    .NPS-display-title-text{
+        display: flex;
+        height:10px;
+        align-items: center;
+    }
+    .group-grade{
+        top:10vh;
+    }
+    .Display-individual-grade{
+        top: 50vh;
+        height: 10px;
+    }
+}
