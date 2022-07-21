@@ -19,7 +19,7 @@ function App() {
   
   useEffect(()=>{
       setUserId(localStorage.getItem("UserId"));
-      console.log(vote);
+      
   },[isAuth,vote])
   
   
@@ -27,8 +27,9 @@ function App() {
   
     <div>
       <Router>
-        {userId && <Navbar isAuth={isAuth} setIsAuth={setIsAuth}/>} 
-       
+        <div className="main-navbar">
+        {userId && <Navbar  isAuth={isAuth} setIsAuth={setIsAuth}/>} 
+        </div>
         <Routes>
            <Route path="/nps-report" element={<NpsReport votes={votes} setVotes={setVotes} setVote={setVote}/>} />
            <Route path="/partial-result" element={<Partial />} />

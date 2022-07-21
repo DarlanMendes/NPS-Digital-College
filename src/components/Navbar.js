@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { signOut } from "firebase/auth";
 import { auth } from '../Api';
@@ -24,10 +24,10 @@ const Navbar = ({isAuth,setIsAuth}) => {
             </div>
             <div className={styles.NavbarItems}>
                 <ul>
-                    <li><Link to="/partial-result" className={styles.Item}>Resultado Parcial</Link></li>
-                    <li><Link to="/nps-report" className={styles.Item}>Relatório NPS</Link></li>
-                    <li><Link to="" className={styles.item}>ADC Nota</Link></li>
-                    <li onClick={LogOut}> Sair</li>
+                    {/* <li><Link to="/partial-result" className={styles.Item}>Resultado Parcial</Link></li> */}
+                    <li><NavLink to="/nps-report" className={styles.Item}>Relatório NPS</NavLink></li>
+                    
+                    <li onClick={LogOut} className={styles.Item}> Sair</li>
                 </ul>
             </div>
 

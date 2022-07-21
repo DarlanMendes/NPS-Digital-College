@@ -1,10 +1,10 @@
-import './Dashboard.css'
+
 import { Chart } from "react-google-charts";
 
 
 
 const Dashboard =({gradeVoters})=> {
-  console.log("gdvoters", gradeVoters)
+  
   const options = {
     
     chart: {
@@ -37,9 +37,9 @@ const Dashboard =({gradeVoters})=> {
     <div className='dashboard-Container'>
       <Chart
         chartType="ColumnChart"
-        width="100%"
-        height="200px"
-       
+        width="790px"
+        height="340px"
+        fontSize="5px"
         
         data={data}
         options={options}

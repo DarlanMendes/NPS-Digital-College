@@ -1,28 +1,32 @@
-import React from "react";
-import { Chart } from "react-google-charts";
+import { Chart} from "react-google-charts";
 
-export const data = [
-  ["Grupos", "Votos"],
-  ["Decratores", 33],
-  ["Passivos", 26],
-  ["Promotores", 22],
-];
+const Dashboard2 = ({gradeVoters}) => {
+  console.log(gradeVoters);
+  const data = [
+    ["Grupos", "Votos"],
+    ["Detratores", eval(gradeVoters[0].grade)+eval(gradeVoters[1].grade)+eval(gradeVoters[2].grade)+eval(gradeVoters[3].grade)+eval(gradeVoters[4].grade)+eval(gradeVoters[5].grade) ],
+    ["Passivos", eval(gradeVoters[6].grade)+eval(gradeVoters[7].grade)],
+    ["Promotores", eval(gradeVoters[8].grade)+eval(gradeVoters[9].grade)],
+  ];
 
-export const options = {
-  title: "NPS",
-  sliceVisibilityThreshold: 0.2, // 20%
-};
-
-export function App() {
+  const options = {
+    title: "NPS",
+    legend:"Percentual de detratores, passivos e promotores",
+    sliceVisibilityThreshold: 0.0, // 20%
+    chartArea:{left:15,top:30,right:0,bottom:30,width:'100%',height:'100%',padding:'0'},
+    colors:['#cc0000','#dbbd00','green'],
+    fontSize:25
+  };
   return (
     <Chart
       chartType="PieChart"
       data={data}
       options={options}
-      width={"100%"}
-      height={"400px"}
+      width={"550px"}
+      height={"340px"}
+      
     />
   );
 }
 
-
+export default Dashboard2;

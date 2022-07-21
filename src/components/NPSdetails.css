@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column; 
     max-width: 1600px;
-    margin:20px 0;
+    margin:5px 0;
     
 }
 .Item a{
@@ -10,28 +10,27 @@
 }
 .title{
     display: flex;
-    width: 100%;
-    
+   
     justify-content: space-around;
     color: white;
     padding: 0px 15px;
     border-radius: 5px;
-    
+    font-size: 0.7em;
 }
 
 .subtitle{
     display: flex;
-    width:90%;
-    
-    justify-content: space-between;
-    margin-top: 5px;
+   
+    justify-content: space-around;
+    margin-top: 2px;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
+    font-size: 0.7em;
 }
 h3{
     font-size: 0.8em;
-    margin:10px;
+    margin:10px auto;
 }
 @media (max-width: 500px){
     

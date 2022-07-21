@@ -1,14 +1,15 @@
 .Container-NPS-display {
-    height: 80%;
-    width: 80%;
+    height: 350px;
+    width: 400px;
     max-width: 600px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 30px;
+    align-items: space-around;
+    padding: 10px 10px;
     border-radius: 20px;
-    margin:auto;
+    margin:auto 40px;
 }
 .Container-nps-class-left{
     display:flex;
@@ -33,16 +34,30 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 60px;
+    height: 50px;
     margin: auto;
     color:white;
+    text-align: center;
+    flex-wrap: wrap;
+    
 }
 
 .NPS-display-result {
-    font-size: 100px;
+    font-size: 70px;
     color:white;
+    margin: 0 auto;
+    padding:0;
 }
 
 .NPS-display-text {
     color:white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 5px 0;
+    height:120px
 }
