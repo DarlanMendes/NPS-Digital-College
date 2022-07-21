@@ -201,7 +201,7 @@ const NpsReport = ({isAuth,votes, setVotes, setVote }) => {
                 (<div className="group-grade" key={index}>
                     <h3 className='individual-grade' style={({ backgroundColor: note.color })}>{note.class}</h3>
                   {readDB? <div className='individual-grade-text' > {note.grade} </div>
-                  :<input className='input-individual-grade' type="number" placeholder={note.grade}  onChange={(e) => { note.grade = (e.target.value)}}></input>}
+                  :<input className='input-individual-grade' type="number" min="0" placeholder={note.grade}  onChange={(e) => { note.grade = (e.target.value)}}></input>}
                 </div>))}
 
 

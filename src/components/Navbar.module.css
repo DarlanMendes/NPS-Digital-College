@@ -15,6 +15,12 @@
 .NavbarTitle{
  color:white;
  font-size: 20px;
+ display:flex;
+ 
+ justify-content: space-around;
+ align-items: center;
+ width:300px;
+
 }
 .NavbarItems{
     color:white;
@@ -43,4 +49,8 @@ li{
     color:black;
     cursor: pointer;
     
+}
+.User span{ 
+    color: white;
+    font-size: 0.6em;
 }

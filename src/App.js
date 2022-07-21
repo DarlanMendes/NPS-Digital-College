@@ -28,7 +28,7 @@ function App() {
     <div>
       <Router>
         <div className="main-navbar">
-        {isAuth&& <Navbar  isAuth={isAuth} setIsAuth={setIsAuth}/>} 
+        {localStorage.getItem("UserId")&& <Navbar  isAuth={isAuth} setIsAuth={setIsAuth}/>} 
         </div>
         <Routes>
            <Route path="/nps-report"  element={<NpsReport isAuth={isAuth} votes={votes} setVotes={setVotes} setVote={setVote}/>} />

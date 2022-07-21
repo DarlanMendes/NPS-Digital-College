@@ -18,6 +18,8 @@ const Login = ({ isAuth, setIsAuth }) => {
         console.log(userCredential.user.uid);
         alert("Logado com sucesso");
         localStorage.setItem('UserId', userCredential.user.uid);
+        localStorage.setItem('UserEmail',userCredential.user.email);
+        
         setIsAuth(true);
         navigate("/nps-report");
 

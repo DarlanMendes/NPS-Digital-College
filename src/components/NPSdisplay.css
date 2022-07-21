@@ -10,6 +10,7 @@
     padding: 10px 10px;
     border-radius: 20px;
     margin:auto 40px;
+    box-shadow: 0px 0px 2px 4px  #ccc;
 }
 .Container-nps-class-left{
     display:flex;
@@ -21,25 +22,28 @@
     align-items: center;
     justify-content: space-around;
     color:white;
+    text-align: center;
 }
-
+.NPS-display-title h1{
+    font-size: 1.6em;
+}
 .NPS-display-title img {
     height: 90px;
-    background-color: white;
+    margin-bottom: 5px;
     border-radius: 100%;
 }
 
 .NPS-display-title-text {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 50px;
-    margin: auto;
+    align-items:flex-start;
+    height: 90px;
+    margin: 0 auto;
     color:white;
     text-align: center;
     flex-wrap: wrap;
-    
+    width:100px;
+    top: 0px;
 }
 
 .NPS-display-result {
