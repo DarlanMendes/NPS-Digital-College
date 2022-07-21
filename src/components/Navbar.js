@@ -3,12 +3,13 @@ import styles from "./Navbar.module.css";
 import { signOut } from "firebase/auth";
 import { auth } from '../Api';
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Navbar = ({isAuth,setIsAuth}) => {
     const LogOut = () => {
         signOut(auth).then(() => {
            alert("Usuário deslogado com sucesso");
-           localStorage.clear();
+           localStorage.clear("");
            setIsAuth(false);
            console.log(isAuth);
            window.location.pathname= "/";
@@ -17,7 +18,14 @@ const Navbar = ({isAuth,setIsAuth}) => {
         });
     }
 
+    useEffect(()=>{
+
+    },[isAuth,localStorage.getItem("UserId")])
+   
+
     return (
+        
+       
         <div className={styles.Navbar}>
             <div className={styles.NavbarTitle}>
                 NPS
@@ -32,7 +40,7 @@ const Navbar = ({isAuth,setIsAuth}) => {
             </div>
 
         </div>
-
+    
     );
 }
 export default Navbar

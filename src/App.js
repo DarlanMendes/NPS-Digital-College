@@ -28,12 +28,12 @@ function App() {
     <div>
       <Router>
         <div className="main-navbar">
-        {userId && <Navbar  isAuth={isAuth} setIsAuth={setIsAuth}/>} 
+        {isAuth&& <Navbar  isAuth={isAuth} setIsAuth={setIsAuth}/>} 
         </div>
         <Routes>
-           <Route path="/nps-report" element={<NpsReport votes={votes} setVotes={setVotes} setVote={setVote}/>} />
+           <Route path="/nps-report"  element={<NpsReport isAuth={isAuth} votes={votes} setVotes={setVotes} setVote={setVote}/>} />
            <Route path="/partial-result" element={<Partial />} />
-          <Route path="/" element ={!userId &&<Login setIsAuth={setIsAuth}/>}/>
+          <Route path="/" element ={<Login isAuth={isAuth} setIsAuth={setIsAuth}/>}/>
           <Route path='/sign-up' element={<SignUp/>}/>
          <Route path="/detailed" element={<Detailed vote={vote}/>}/>
         </Routes>

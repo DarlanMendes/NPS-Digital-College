@@ -1,12 +1,12 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../Api"
 import styles from './Login.module.css';
 import medidor from '../../assets/img/Medidor.png';
 import bcgEdge from '../../assets/img/backgroundEdge.png'
 
-const Login = ({ setIsAuth }) => {
+const Login = ({ isAuth, setIsAuth }) => {
   let navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,7 +28,13 @@ const Login = ({ setIsAuth }) => {
         alert(errorMessage);
       });
   }
-
+  useEffect(() => {
+   
+    if(localStorage.getItem("UserId")) {
+      window.location.pathname ="/nps-report";
+      
+    }
+  }, [isAuth])
   return (
     <div className={styles.ContainerLogin}>
       <div className={styles.quadro}>
@@ -50,7 +56,7 @@ const Login = ({ setIsAuth }) => {
           <img className={styles.imgLogin} src={medidor} />
         </div>
         <footer></footer>
-        <img className={styles.bcgEdge} src={bcgEdge}/>
+        <img className={styles.bcgEdge} src={bcgEdge} />
       </div>
     </div>
   );

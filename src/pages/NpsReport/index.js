@@ -10,7 +10,7 @@ import { GoGraph } from "react-icons/go";
 import {ImTable} from "react-icons/im";
 
 
-const NpsReport = ({ votes, setVotes, setVote }) => {
+const NpsReport = ({isAuth,votes, setVotes, setVote }) => {
     
     const [seeDashboard, setSeeDashboard] = useState(false);
     const [readDB, setReadDB] = useState(false);
@@ -148,6 +148,7 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
     }
     //------Garantia de serão carregados os dados quando houver mudanças---------------------------------------------------
     useEffect(() => {
+        if(!localStorage.getItem("UserId")){ window.location.pathname="/"};
         setVotes([{ class: "Nota de 1 a 6", gradeLength: detractors, totalGradeLength: total, bgColor: "#dc4242" },
         { class: "Nota de 7 a 8", gradeLength: passives, totalGradeLength: total, bgColor: "#f0c955" },
         { class: "Nota de 9 a 10", gradeLength: promoters, totalGradeLength: total, bgColor: "green" }]);
@@ -163,6 +164,8 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
     return (
 
         <div className='mainResults'>
+           {localStorage.getItem("UserId")&&
+           <>
             <div className="top-Container">
                 <div className="header-Container">
                     <h2>Resultados NPS</h2>
@@ -207,6 +210,8 @@ const NpsReport = ({ votes, setVotes, setVote }) => {
                     <button className="btn-report-set-up" onClick={SetUpVotes} style={{ display: readDB && 'none' }}>Calcular NPS</button>
                 </div>
             </div>
+            </>
+           } 
         </div>
 
     );
