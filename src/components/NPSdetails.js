@@ -10,7 +10,7 @@ const NPSdetails =({setVote,votes})=>{
             {votes.map((item, key) => (
                     <div key={key} className="Item" onClick={() => { setVote(item) }}>
 
-                        <Link to="/detailed" >
+                      
                         
                             <div className='title'style={{backgroundColor:item.bgColor}}>
                                 <h3>{item.class}</h3>
@@ -23,7 +23,7 @@ const NPSdetails =({setVote,votes})=>{
                                 <h3>{item.totalGradeLength>=1?(((item.gradeLength) / (item.totalGradeLength) * 100 )).toFixed(2):0}</h3>
                             </div>
 
-                        </Link>
+                        
                     </div>
                 ))}
         </div>

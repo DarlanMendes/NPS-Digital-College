@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { auth } from "../../Api";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
@@ -43,6 +43,7 @@ const SignUp = () => {
             });
 
     }
+   
 
     return (
         <>

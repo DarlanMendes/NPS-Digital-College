@@ -66,11 +66,16 @@
     height:120px
 }
 @media (max-width: 500px){
+    .mainResults{
+        height:100vh;
+        width:100vw;
+    }
     .Container-NPS-display{
-        height:300px;
-        width:300px;
+        height:40vh;
+        width:100vw;
         justify-content: space-around;
         align-items: center;
+        margin:40px 0px;
     }
     h1{
         font-size: 0.8em;
@@ -90,10 +95,22 @@
         align-items: center;
     }
     .group-grade{
-        top:10vh;
+      height:90px;
     }
-    .Display-individual-grade{
-        top: 50vh;
-        height: 10px;
+    .Display-individual-grades{
+        top: 52vh;
+        height: 500px;
+        width:100%;
+        
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .btn-select-set{
+        height:15vh;
+        display:block;
+        position:fixed;
+        top:77vh;
+        width:100vw;
     }
 }

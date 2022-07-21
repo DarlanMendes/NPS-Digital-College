@@ -39,7 +39,7 @@ body{
 }
 .dashContainer{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width:100%;
@@ -216,20 +216,21 @@ h2{
 }
 
 @media (max-width: 500px){
-    .Display-individual-grades{
-        display: flex;
-        width:100%;
-        height: 20%;
-    }
+   
     .title{
         display: flex;
         flex-direction: row;
     }
     .header-Container{
-        height:5%;
+        display:block;
     }
     a{
         display: flex;
+    }
+   
+    .btn-toggle-dashboard{
+        display:block;
+        width:8px;
     }
 }
 

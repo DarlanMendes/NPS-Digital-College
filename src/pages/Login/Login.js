@@ -30,6 +30,14 @@ const Login = ({ isAuth, setIsAuth }) => {
         alert(errorMessage);
       });
   }
+  const handleAllowSignUp =()=>{
+    let allowance = window.prompt("O cadastro só é permitido aos funcionários da Digital College.Digite a senha para acessar a tela de cadastro");
+    if(allowance==="DLA software - Sua solução está aqui"){
+      window.location.pathname="/sign-up";
+    }else{
+      window.alert("Senha inválida");
+    }
+  }
   useEffect(() => {
    
     if(localStorage.getItem("UserId")) {
@@ -51,7 +59,7 @@ const Login = ({ isAuth, setIsAuth }) => {
           </div>
           <div className={styles.inpt}>
             <button className={styles.btn2} onClick={handleLogin}>Entrar</button>
-            <button className={styles.btn2}><Link className={styles.Link} to="/sign-up">Cadastro</Link></button>
+            <button className={styles.btn2} onClick={handleAllowSignUp}>Cadastro</button>
           </div>
         </div>
         <div className={styles.logo}>
