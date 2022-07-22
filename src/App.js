@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
-import Partial from './pages/Partial';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 import NpsReport from './pages/NpsReport';
 import Navbar from './components/Navbar';
@@ -32,7 +32,6 @@ function App() {
         </div>
         <Routes>
            <Route path="/nps-report"  element={<NpsReport isAuth={isAuth} votes={votes} setVotes={setVotes} setVote={setVote}/>} />
-           <Route path="/partial-result" element={<Partial />} />
           <Route path="/" element ={<Login isAuth={isAuth} setIsAuth={setIsAuth}/>}/>
           <Route path='/sign-up' element={<SignUp/>}/>
          

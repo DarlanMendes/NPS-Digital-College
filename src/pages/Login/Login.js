@@ -39,10 +39,9 @@ const Login = ({ isAuth, setIsAuth }) => {
     }
   }
   useEffect(() => {
-   
+    
     if(localStorage.getItem("UserId")) {
       window.location.pathname ="/nps-report";
-      
     }
   }, [isAuth])
   return (

@@ -17,6 +17,8 @@ const Navbar = ({ isAuth, setIsAuth }) => {
         });
     }
 
+
+    //
     useEffect(() => {
 
     }, [isAuth, localStorage.getItem("UserId")])
@@ -28,7 +30,7 @@ const Navbar = ({ isAuth, setIsAuth }) => {
         <div className={styles.Navbar}>
             <div className={styles.NavbarTitle}>
             <GoGraph /> 
-                <div ClassName={styles.Icon}>
+                <div className={styles.Icon}>
                     <h1>NPS</h1>
                 </div>
                 <div className={styles.User}>
@@ -44,6 +46,7 @@ const Navbar = ({ isAuth, setIsAuth }) => {
                     <li onClick={LogOut} className={styles.Item}> Sair</li>
                 </ul>
             </div>
+
 
         </div>
 
