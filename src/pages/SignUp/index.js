@@ -6,7 +6,7 @@ import './index.css';
 import medidor from '../../assets/img/Medidor.png';
 import bcgEdge from '../../assets/img/backgroundEdge.png'
 
-const SignUp = () => {
+const SignUp = ({registerAllowed}) => {
     let navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -44,6 +44,12 @@ const SignUp = () => {
 
     }
    
+
+    useEffect(()=>{
+        if(!registerAllowed){
+            window.location.pathname= "/";
+        }
+    })
 
     return (
         <>

@@ -15,7 +15,7 @@ function App() {
   const [isAuth,setIsAuth] = useState(false);
   const [votes,setVotes]= useState([]);
   const [vote,setVote]=useState();
-  
+  const[registerAllowed,setRegisterAllowed]=useState(false);
   
   useEffect(()=>{
       setUserId(localStorage.getItem("UserId"));
@@ -32,8 +32,8 @@ function App() {
         </div>
         <Routes>
            <Route path="/nps-report"  element={<NpsReport isAuth={isAuth} votes={votes} setVotes={setVotes} setVote={setVote}/>} />
-          <Route path="/" element ={<Login isAuth={isAuth} setIsAuth={setIsAuth}/>}/>
-          <Route path='/sign-up' element={<SignUp/>}/>
+          <Route path="/" element ={<Login isAuth={isAuth} setIsAuth={setIsAuth} setRegisterAllowed={setRegisterAllowed}/>}/>
+          <Route path='/sign-up' element={<SignUp registerAllowed={registerAllowed}/>}/>
          
         </Routes>
       </Router>
