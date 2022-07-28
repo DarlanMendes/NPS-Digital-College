@@ -34,8 +34,9 @@ const Login = ({ isAuth, setIsAuth, setRegisterAllowed }) => {
     
     let allowance = window.prompt("O cadastro só é permitido aos funcionários da Digital College.Digite a senha para acessar a tela de cadastro");
     if(allowance==="DLA software - Sua solução está aqui"){
-      window.location.pathname="/sign-up";
       setRegisterAllowed(true);
+      window.location.pathname="/sign-up";
+     
     }else{
       window.alert("Senha inválida");
     }
