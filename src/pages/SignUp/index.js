@@ -47,9 +47,10 @@ const SignUp = ({registerAllowed}) => {
 
     useEffect(()=>{
         if(!registerAllowed){
-            window.location.pathname= "/";
+        console.log(registerAllowed)
+         window.location.pathname= "/";
         }
-    })
+    },[])
 
     return (
         <>
